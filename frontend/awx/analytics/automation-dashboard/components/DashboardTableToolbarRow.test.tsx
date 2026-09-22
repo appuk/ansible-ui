@@ -67,6 +67,7 @@ function buildProps(
 ): DashboardTableToolbarProps {
   return {
     isLoading: false,
+    isLoadingTemplateIds: false,
     itemCount: 1,
     costState: defaultCostState,
     setCostState: mockSetCostState,

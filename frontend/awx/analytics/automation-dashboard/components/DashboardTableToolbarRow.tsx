@@ -22,6 +22,7 @@ export function DashboardTableToolbarRow(props: DashboardTableToolbarProps) {
     refresh,
     onExportCsv,
     isLoading,
+    isLoadingTemplateIds,
     toolbarFilters,
     filterState,
   } = props;
@@ -171,7 +172,7 @@ export function DashboardTableToolbarRow(props: DashboardTableToolbarProps) {
             exportType={'csv'}
             title={t('Export as CSV')}
             icon={ExportIcon}
-            isDisabled={isLoading || !itemCount || !costState || !filtersValid}
+            isDisabled={isLoading || isLoadingTemplateIds || !itemCount || !costState || !filtersValid}
             onExport={onExportCsv ?? (() => Promise.resolve())}
           ></DashboardExportButton>
         </FlexItem>

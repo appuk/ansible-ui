@@ -51,6 +51,7 @@ export function DashboardMainTableCard(props: IAutomationDashboardView) {
     refresh,
     exportCsv,
     loading,
+    isLoadingTemplateIds,
     detailsError,
     isFilterStateDefault,
     toolbarFilters,
@@ -267,6 +268,7 @@ export function DashboardMainTableCard(props: IAutomationDashboardView) {
       <CardBody>
         <DashboardTableToolbarRow
           isLoading={loading}
+          isLoadingTemplateIds={isLoadingTemplateIds}
           itemCount={mainTableView?.itemCount ?? 0}
           costState={costState}
           setCostState={setCostState}

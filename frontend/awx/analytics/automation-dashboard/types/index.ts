@@ -152,6 +152,7 @@ export type DashboardTableInputFieldProps = {
 
 export type DashboardTableToolbarProps = {
   isLoading: boolean;
+  isLoadingTemplateIds: boolean;
   itemCount: number | undefined;
   costState: ISubscriptionCosts | undefined;
   setCostState: Dispatch<SetStateAction<ISubscriptionCosts | undefined>> | undefined;
@@ -168,6 +169,8 @@ export type IAutomationDashboardView = {
   details: IDashboardDetails | undefined;
   detailsError: Error | undefined;
   detailsLoading: boolean;
+  templateIdsError: Error | undefined;
+  isLoadingTemplateIds: boolean;
   costState: ISubscriptionCosts | undefined;
   setCostState: Dispatch<SetStateAction<ISubscriptionCosts | undefined>>;
   loading: boolean;
